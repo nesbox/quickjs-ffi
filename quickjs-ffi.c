@@ -25,10 +25,10 @@ SOFTWARE.
 #define _GNU_SOURCE
 #include <dlfcn.h>
 #include <ffi.h>
-#include <gnu/lib-names.h>
+// #include <gnu/lib-names.h>
 #include <limits.h>
-#include <quickjs/quickjs-libc.h>
-#include <quickjs/quickjs.h>
+#include <quickjs-libc.h>
+#include <quickjs.h>
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -622,8 +622,8 @@ static JSCFunctionListEntry funcs[] = {
     C_SIZEOF_DEF(uintptr_t),
     C_SIZEOF_DEF(int),
     C_SIZEOF_DEF(size_t),
-    C_MACRO_STRING_DEF(LIBC_SO),
-    C_MACRO_STRING_DEF(LIBM_SO),
+    // C_MACRO_STRING_DEF(LIBC_SO),
+    // C_MACRO_STRING_DEF(LIBM_SO),
     //
     // libdl
     //
@@ -635,9 +635,9 @@ static JSCFunctionListEntry funcs[] = {
     C_MACRO_INT_DEF(RTLD_NOW),
     C_MACRO_INT_DEF(RTLD_GLOBAL),
     C_MACRO_INT_DEF(RTLD_LOCAL),
-    C_MACRO_INT_DEF(RTLD_NODELETE),
-    C_MACRO_INT_DEF(RTLD_NOLOAD),
-    C_MACRO_INT_DEF(RTLD_DEEPBIND),
+    // C_MACRO_INT_DEF(RTLD_NODELETE),
+    // C_MACRO_INT_DEF(RTLD_NOLOAD),
+    // C_MACRO_INT_DEF(RTLD_DEEPBIND),
 #if defined(_GNU_SOURCE)
     C_MACRO_UINTPTR_T_DEF(RTLD_DEFAULT),
     C_MACRO_UINTPTR_T_DEF(RTLD_NEXT),
